@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { Button, Input, Alert } from 'react-daisyui'
+import { Button, Input } from 'react-daisyui'
 // import useAuthenticate from '../services/auth'
 const Profile: React.FC = () =>{
     return (
@@ -9,7 +9,7 @@ const Profile: React.FC = () =>{
             <form onSubmit={()=>{}} className="card-body">
               <div className="form-control">
                 {/* {error && ( */}
-                  <Alert
+                  {/* <Alert
                     status="error"
                     icon={
                       <svg
@@ -27,8 +27,7 @@ const Profile: React.FC = () =>{
                       </svg>
                     }
                   >
-                    {/* <span>{error}</span> */}
-                  </Alert>
+                  </Alert> */}
                 {/* )} */}
     
                 <label className="label">
@@ -61,7 +60,7 @@ const Profile: React.FC = () =>{
               
               <div className="form-control mt-6" id="recaptcha-id">
                 <Button type="submit" color="primary">
-                  Authenticate
+                  Save
                   {/* {loading && <Loading variant="dots" />} */}
                 </Button>
               </div>
