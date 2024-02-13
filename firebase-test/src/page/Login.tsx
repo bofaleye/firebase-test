@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Input, Loading, Alert } from 'react-daisyui'
-import useAuthenticate from './services/auth'
+import useAuthenticate from '../services/auth'
 const Login: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState<string>('')
   const [code, setVerificationCode] = useState<string>('')

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
-import { firebaseConfig } from '../../firebase.config'
+import { firebaseConfig } from '../firebase.config'
 
 interface AuthState {
   user: firebase.User | null
@@ -64,6 +64,7 @@ const useAuthenticate = (): UseAuthProps => {
         recaptchaVerifier.clear()
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const signInWithPhoneNumber = async (phoneNumber: string) => {
@@ -127,7 +128,6 @@ const useAuthenticate = (): UseAuthProps => {
       )
       await firebase.auth().signInWithCredential(credential)
       navigate('/profile')
-      console.log('signIN Success')
     } catch (error) {
       setAuthState({
         ...authState,
